@@ -1,0 +1,44 @@
+npm install sequelize@5.21.7 sequelize-cli@5.5.1
+
+- CRIA JÁ AS PASTA MVC AUTOMATICO
+npx sequelize-cli init
+
+- CRIA UM BANCO AUTOMATICO
+npx sequelize-cli model: create --name Pessoas --attributes nome:string,ativo:boolean,email:string,role:string
+
+- CRIA MIGRAÇÃO PARA PROD
+npx sequelize-cli db:migrate
+
+- RODA A DEMO DE INSERÇÃO AUTOMATICO NA TABELA DO BANCO
+npx sequelize-cli db:seed:all
+
+- DESFAZER A MIGRAÇÕES EM ORM
+npx sequelize-cli db:migrate:undo
+db:migrate:undo --name [data-hora]-create-[nome-da-tabela].js
+
+- Desfazendo seeds
+npx sequelize db:seed:undo
+npx sequelize-cli db:seed:undo --seed nome-do-arquivo
+npx sequelize-cli db:seed:undo:all
+
+- A lista de métodos criados automaticamente com as instâncias de modelo são:
+
+addModel()
+
+addModels()
+
+countModels()
+
+createModel()
+
+getModels()
+
+hasModel()
+
+hasModels()
+
+removeModel()
+
+removeModels()
+
+setModels()
